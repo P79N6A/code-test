@@ -5,7 +5,7 @@ import java.util.concurrent.BlockingQueue;
 /**
  * Created by siyunfei on 2018/10/9.
  */
-public class Test {
+public class TestBlocking {
     static Random random = new Random();
 
     static BlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(10);
