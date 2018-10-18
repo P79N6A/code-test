@@ -9,6 +9,8 @@ public class RocksDBTest {
     public static void main(String[] args) throws RocksDBException {
         RocksDB rocksDB = RocksDB.open("D:\\rocksDBFile");
         rocksDB.put("name".getBytes(), "tracy".getBytes());
-        System.out.println(new String(rocksDB.get("name".getBytes())));
+        long start = System.currentTimeMillis();
+        byte[] name = rocksDB.get("name".getBytes());
+        System.out.println(System.currentTimeMillis() - start);
     }
 }
