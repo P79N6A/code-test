@@ -7,7 +7,14 @@ import java.util.Date;
  */
 public class Task {
 
-    public void doTask(){
-        System.out.println("execute task..." + new Date());
+    public void doTask() {
+        Date date = new Date();
+        System.out.println("execute task..." + date + ",,," + this.toString());
+        try {
+            Thread.sleep(10000);
+            System.out.println("sleep well===" + date);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
