@@ -1,5 +1,4 @@
-import com.netflix.hystrix.HystrixCommand;
-import com.netflix.hystrix.HystrixCommandGroupKey;
+import com.netflix.hystrix.*;
 
 /**
  * @author: siyunfei
@@ -8,18 +7,28 @@ import com.netflix.hystrix.HystrixCommandGroupKey;
 public class HelloWorldHystrixCommand extends HystrixCommand<Student> {
 
     protected HelloWorldHystrixCommand() {
-        super(HystrixCommandGroupKey.Factory.asKey("ExampleGroup"));
+        super(Setter.withGroupKey(HystrixCommandGroupKey.Factory.asKey("ttbrain_groups"))
+                .andCommandKey(HystrixCommandKey.Factory.asKey("ttbrain_3423_command"))
+                .andThreadPoolKey(HystrixThreadPoolKey.Factory.asKey("ttbrain_c3423_threadpoolKey"))
+
+                .andThreadPoolPropertiesDefaults(HystrixThreadPoolProperties.Setter()
+                        .withCoreSize(10)
+                        .withMaximumSize(50)
+                        .withKeepAliveTimeMinutes(1)
+                        .withMaxQueueSize(500))
+
+                .andCommandPropertiesDefaults(HystrixCommandProperties.Setter()
+                        .withExecutionIsolationStrategy(HystrixCommandProperties.ExecutionIsolationStrategy.THREAD)
+                        .withExecutionTimeoutInMilliseconds(10)
+                        .withFallbackIsolationSemaphoreMaxConcurrentRequests(2000)));
     }
 
+    @Override
     protected Student run() throws Exception {
-        try {
-            int a = 5 / 0;
-        } catch (Exception e) {
-            //e.printStackTrace();
-            System.out.println("exception");
-        }
-        System.out.println(Thread.currentThread().getName());
-        return new Student("xiaobai", "1212");
+        long start = System.currentTimeMillis();
+        Student student = new Student("dfadf", "23");
+        System.out.println(System.currentTimeMillis() - start);
+        return student;
     }
 
     @Override
@@ -29,8 +38,15 @@ public class HelloWorldHystrixCommand extends HystrixCommand<Student> {
 
     public static void main(String[] args) {
         Student student = new HelloWorldHystrixCommand().execute();
-        System.out.println(student);
-        System.out.println(Thread.currentThread().getName());
+        //System.out.println(Thread.currentThread().getName());
+        /*for (int i = 0; i < 5; i++) {
+            new Thread(new Runnable() {
+                public void run() {
+                    Student student = new HelloWorldHystrixCommand().execute();
+                    System.out.println(student);
+                }
+            }).start();
+        }*/
     }
 }
 

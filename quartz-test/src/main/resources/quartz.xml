@@ -12,6 +12,7 @@
         <property name="targetObject" ref="taskT"/>
         <!--要执行的方法-->
         <property name="targetMethod" value="doTask"/>
+        <property name="concurrent" value="false"/>
     </bean>
 
     <!--调度触发器-->
@@ -29,5 +30,6 @@
                 <ref bean="trigger"/>
             </list>
         </property>
+        <!--<property name="startupDelay" value="10"/>-->
     </bean>
 </beans>
