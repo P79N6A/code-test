@@ -1,0 +1,6 @@
+[11-14 17:05:03] [INFO] [com.silocean.TLogger:10] hello
+[11-14 17:06:15] [INFO] [com.silocean.TLogger:11] hello
+[11-14 17:07:22] [INFO] [com.silocean.TLogger:11] hello
+2018/11/14 18:03:51.070 [mainhread] Test2.main(Test2.java:11)evel Test2.main(Test2.java:11)ogger{36} - hellosg
+2018/11/14 18:04:12.275 [mainhread] Test2.main(Test2.java:11)evel Test2.main(Test2.java:11)ogger{100} - hellosg
+2018/11/14 18:05:36.243 [INFO] [com.silocean.TLogger:11] hello

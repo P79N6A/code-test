@@ -1,0 +1,5 @@
+[11-12 20:41:49] [INFO] [test:10] hello
+[11-12 20:42:04] [INFO] [test:10] hello
+[11-12 20:44:46] [INFO] [test:10] hello
+[11-12 20:49:25] [INFO] [second_logger:10] hello
+[11-12 20:49:33] [INFO] [second_logger:10] hello

@@ -1,10 +1,13 @@
+import org.springframework.beans.factory.InitializingBean;
+
 /**
  * Created by siyunfei on 2018/10/24.
  */
-public class Student {
+public class Student implements InitializingBean {
     private String name;
 
     public Student() {
+        System.out.println("init=============");
     }
 
     public Student(String name) {
@@ -28,5 +31,9 @@ public class Student {
 
     public void func(){
         System.out.println("this is a function");
+    }
+
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("========================");
     }
 }
