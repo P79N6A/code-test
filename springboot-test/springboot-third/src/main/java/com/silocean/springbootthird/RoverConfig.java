@@ -1,4 +1,4 @@
-package com.silocean.springbootsecond;
+package com.silocean.springbootthird;
 
 import brave.Tracing;
 import brave.http.HttpTracing;
@@ -23,7 +23,7 @@ public class RoverConfig {
     public Tracing tracing(Reporter<Span> reporter) {
         return Tracing
                 .newBuilder()
-                .localServiceName("child-service")                 // 填写当前程序的名称
+                .localServiceName("child2-service")                 // 填写当前程序的名称
                 .projectID(12345)                              // 填写爱奇艺云所属项目的ID
                 .spanReporter(reporter)
                 .sampler(Sampler.create(1.0f))                  // 设置采样率；如果选择全采样，可以省略

@@ -19,7 +19,7 @@ import zipkin2.reporter.Reporter;
  */
 @Configuration
 @EnableWebMvc
-public class RoverConfig extends WebMvcConfigurerAdapter {
+public class RoverConfig {
     @Bean
     public Tracing tracing(Reporter<Span> reporter) {
         return Tracing
