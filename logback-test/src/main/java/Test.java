@@ -7,6 +7,10 @@ import org.slf4j.LoggerFactory;
 public class Test {
 
     public static void main(String[] args) {
+        new Test().printLog();
+    }
+
+    public void printLog() {
         Logger logger = LoggerFactory.getLogger(Test.class);
         logger.debug("hello");
         Logger logger1 = LoggerFactory.getLogger("com.iqiyi.rover.commons.RoverSpanLoggerReporter");

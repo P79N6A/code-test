@@ -6,4 +6,9 @@
     <bean id="student" class="Student" init-method="func">
         <property name="name" value="bryant"/>
     </bean>
+
+    <bean id="car" class="Car">
+    </bean>
+
+    <bean class="SpringContextUtil"/>
 </beans>
