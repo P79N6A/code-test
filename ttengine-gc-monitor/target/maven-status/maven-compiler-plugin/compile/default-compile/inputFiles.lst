@@ -1,5 +1,6 @@
-D:\code-test\ttengine-gc-monitor\src\main\java\com\iqiyi\ttengine\gc\monitor\GCMonitor.java
-D:\code-test\ttengine-gc-monitor\src\main\java\com\iqiyi\ttengine\gc\monitor\GCGraphiteMetricFactory.java
-D:\code-test\ttengine-gc-monitor\src\main\java\com\iqiyi\ttengine\gc\entity\GCMetricResults.java
-D:\code-test\ttengine-gc-monitor\src\main\java\com\iqiyi\ttengine\gc\entity\GCMetricEnum.java
-D:\code-test\ttengine-gc-monitor\src\main\java\com\iqiyi\ttengine\gc\MetricResultNumber.java
+/Users/mac/Documents/GitHub/code-test/ttengine-gc-monitor/src/main/java/com/iqiyi/ttengine/gc/monitor/GCMonitorThread.java
+/Users/mac/Documents/GitHub/code-test/ttengine-gc-monitor/src/main/java/com/iqiyi/ttengine/gc/monitor/GCMonitor.java
+/Users/mac/Documents/GitHub/code-test/ttengine-gc-monitor/src/main/java/com/iqiyi/ttengine/gc/entity/GCMetricResults.java
+/Users/mac/Documents/GitHub/code-test/ttengine-gc-monitor/src/main/java/com/iqiyi/ttengine/gc/entity/MetricResultNumber.java
+/Users/mac/Documents/GitHub/code-test/ttengine-gc-monitor/src/main/java/com/iqiyi/ttengine/gc/entity/GCMetricEnum.java
+/Users/mac/Documents/GitHub/code-test/ttengine-gc-monitor/src/main/java/com/iqiyi/ttengine/gc/monitor/GCGraphiteMetricFactory.java

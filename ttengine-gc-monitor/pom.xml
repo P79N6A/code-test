@@ -49,4 +49,12 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>qiyi</id>
+            <url>http://maven.qiyi.virtual/a/iqiyi-internal-repo</url>
+        </repository>
+    </distributionManagement>
+
+
 </project>

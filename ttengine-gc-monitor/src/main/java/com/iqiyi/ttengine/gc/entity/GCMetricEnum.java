@@ -1,5 +1,8 @@
 package com.iqiyi.ttengine.gc.entity;
 
+/**
+ * Created by siyunfei on 2018/11/6.
+ */
 public enum GCMetricEnum {
     GC_HEAP_USED("gc_heap_used", GCMetricResults.gcHeapUsed),
     GC_HEAP_SIZE("gc_heap_size", GCMetricResults.gcHeapSize),

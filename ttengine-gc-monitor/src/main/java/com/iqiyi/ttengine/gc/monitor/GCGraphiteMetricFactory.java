@@ -30,7 +30,6 @@ public class GCGraphiteMetricFactory extends GraphiteMetricFactory {
             @Override
             public Double getValue() {
                 MetricResultNumber number = metricResultNumberMap.get(gaugeName);
-                logger.info("@@@@@@@@@@@{}:{}=========", gaugeName, number.getValue());
                 return number.getValue();
             }
         });
